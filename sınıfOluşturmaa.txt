@@ -1,0 +1,61 @@
+------------------
+|    Universite   |
+------------------
+| - siniflar: List<Sınıf> |
+| - ofisler: List<Ofis>    |
+| - departmanlar: List<Departman>|
+------------------
+| + sinifEkle(sınıf: Sınıf) |
+| + ofisEkle(ofis: Ofis)     |
+| + departmanEkle(departman: Departman)|
+------------------
+          |
+          | 1
+          |
+          |
+------------------
+|     Departman   |
+------------------
+| - ofis: Ofis    |
+| - ad: String    |
+------------------
+| + ofisEkle(ofis: Ofis)     
+------------------
+          |
+          | 1
+          |
+          |
+------------------
+|      Ofis       |
+------------------
+| - id: int       |
+| - lokasyon: String|
+| - calisanlar: List<Calisan>|
+------------------
+| + calisanEkle(calisan: Calisan)|
+------------------
+          |
+          | 1
+          |
+          |
+------------------
+|      Calisan    |
+------------------
+| - ad: String    |
+| - soyad: String |
+| - id: int       |
+| - ofis: Ofis    |
+------------------
+| + calisanBilgileriniGoster()|
+------------------
+          / \
+         /   \
+        /     \
+------------------   ------------------
+|     Profesor    |   |      Memur     |
+------------------   ------------------
+| - unvan: String |   | - gorev: String|
+| - uzmanlikAlani: String |
+------------------   ------------------
+| + dersVer()     |   | + isYap()      |
+------------------   ------------------
